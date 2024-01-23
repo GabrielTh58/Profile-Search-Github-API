@@ -1,6 +1,6 @@
 const screen = {
     userProfile: document.querySelector('.profile-data'),
-    renderUser(user, repositories){
+    renderUser(user){
         this.userProfile.innerHTML = `<div class="info">
                                 <img src="${user.avatarUrl}" alt="Foto do perfil do usuário" />
                                 <div class="data">
