@@ -166,7 +166,7 @@ main {
 /* Followers */
 .container .profile-data .followers{
   align-self: flex-start;
-  margin: 2% 0 0 20%;
+  margin: 2% 0 0 15%;
 }
 
 .container .profile-data .followers ul{
