@@ -1,4 +1,4 @@
-import { baseUrl, maxItems } from "../variabes.js";
+import { baseUrl, maxItems } from "../variables.js";
 
 async function getUser(userName){
     const response = await fetch(`${baseUrl}/${userName}`);
