@@ -22,11 +22,14 @@ const screen = {
         
         let repositoriesItens = '';
         user.repositories.forEach(repo => 
-            repositoriesItens += `<li><a href="${repo.html_url}" target="_blank">${repo.name} 
-            <span class="forks"> <i class="fa-solid fa-code-fork"></i> ${repo.forks_count}</span>
-            <span class="stars"> ⭐ ${repo.stargazers_count}</span>
-            <span class="watchers"> 👀 ${repo.watchers}</span>
-            <span class="language">👨‍💻 ${repo.language ?? ''}</span></a></li>`)
+            repositoriesItens += 
+            `<li>
+                <a href="${repo.html_url}" target="_blank">${repo.name} 
+                <span class="forks"> <i class="fa-solid fa-code-fork"></i> ${repo.forks_count}</span>
+                <span class="stars"> ⭐ ${repo.stargazers_count}</span>
+                <span class="watchers"> 👀 ${repo.watchers}</span>
+                <span class="language">👨‍💻 ${repo.language ?? 'Sem linguagens'}</span></a>
+            </li>`)
 
 
         if (user.repositories.length > 0){
@@ -36,14 +39,14 @@ const screen = {
                                             </div>`
 
         }
+
         let userEvents = ''
         user.events.forEach(events => {
             if (events.payload.commits && events.payload.commits.length > 0) {
               const lastCommit = events.payload.commits[events.payload.commits.length - 1];
               userEvents += `<li>${events.repo.name} - ${lastCommit.message}</li>`;
             }
-          });
-          
+        });
           
 
         if (user.events.length > 0){
@@ -55,7 +58,7 @@ const screen = {
     },
   
     renderNotFound(){
-            this.userProfile.innerHTML = `<h3>Usuário não encontrado</h3>`
+        this.userProfile.innerHTML = `<h3>Usuário não encontrado</h3>`
     }
 
 }

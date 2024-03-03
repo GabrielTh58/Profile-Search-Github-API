@@ -1,4 +1,4 @@
-import { getUser, getFollower, getFollowing, userEvents } from "../scripts/services/user.js"
+import { getUser, getFollower, getFollowing, getEvents } from "../scripts/services/user.js"
 import { getRepositories } from "../scripts/services/repositories.js"
 
 import { user } from "../scripts/objects/user.js"
@@ -12,8 +12,8 @@ document.getElementById('btn-search').addEventListener('click', () => {
 })
 
 document.getElementById('input-search').addEventListener('keyup', (e) => {
-    const userName = e.target.value // retorna o valor que esta no input
-    const key = e.which || e.keyCode // pega o evento(chave) da tecla
+    const userName = e.target.value
+    const key = e.which || e.keyCode 
     const isEnterkeyPressed = key === 13
 
     if(isEnterkeyPressed){
@@ -43,7 +43,7 @@ async function getUserData(userName){
     
     user.followers = await getFollower(userName)
     user.following = await getFollowing(userName)
-    user.events = await userEvents(userName);
+    user.events = await getEvents(userName);
 
     screen.renderUser(user,repositoriesResponse)
 }

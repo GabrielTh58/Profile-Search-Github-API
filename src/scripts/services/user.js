@@ -15,9 +15,9 @@ async function getFollowing(userName){
     return await response.json()
 }
 
-async function userEvents(userName){
-    const response = await fetch(`${baseUrl}/${userName}/events?per_page=${maxItems}`)
-    return await response.json()
+async function getEvents(userName){
+    const response = await fetch(`${baseUrl}/${userName}/events`);
+    return await response.json()   
 }
 
-export { getUser, getFollower, getFollowing, userEvents }
+export { getUser, getFollower, getFollowing, getEvents }
