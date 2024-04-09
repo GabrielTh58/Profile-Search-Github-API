@@ -1,4 +1,4 @@
-# Projeto Consumindo API do GitHub
+# GitHub API Project
 
 ## Descrição
 Este projeto é uma aplicação JavaScript que consome a API do GitHub para recuperar informações de usuários e repositórios. Foi desenvolvido utilizando HTML, CSS e JavaScript.
