@@ -8,7 +8,7 @@ Este projeto é uma aplicação JavaScript que consome a API do GitHub para recu
 - Recupera informações de repositórios de um usuário do GitHub, como nome, descrição, linguagem principal e número de estrelas.
 
 ## Como Utilizar
-1. Acesse a página do projeto: (https://gabrielth58.github.io/ApiGithub/).
+1. [Acesse a página do projeto]([https://gabrielth58.github.io/ApiGithub/](https://gabrielth58.github.io/GitHub-API-Project/).
 2. Insira o nome de usuário do GitHub no campo de busca e pressione "Buscar".
 3. As informações do usuário serão exibidas na tela, juntamente com uma lista de seus repositórios públicos.
 
